@@ -12,6 +12,7 @@ body {
 	background: #ccc;
 	opacity: 0;
 	transform: scale(.1);
+	-webkit-transform: scale(.1);
 	transition: all 1s;
 	-webkit-transition: all 1s;
 }
@@ -34,19 +35,23 @@ body {
 	height: 100%;
 	border-radius: 50%;
 	background: inherit;
+	-webkit-animation: glint 3s 1s infinite ease-in-out;
 	animation: glint 3s 1s infinite ease-in-out;
 }
 @-webkit-keyframes glint{
 	0% { 
 		-webkit-transform: scale(.5);
+		transform: scale(.5);
 		opacity:.9;
 	}
 	95% { 
 		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
 		opacity:0; 
 	}
 	100% { 
 		-webkit-transform: scale(.9);
+		transform: scale(.9);
 		opacity:0; 
 	}
 }
