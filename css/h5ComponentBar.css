@@ -1,0 +1,66 @@
+/*柱状图样式*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "microsoft yahei";
+}
+.h5-component-bar .line {
+	height: 1.5rem;
+	line-height: 1.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 12px;
+}
+.h5-component-bar .name {
+	float: left;
+	width: 6rem;
+	text-align: center;
+}
+.h5-component-bar .rate {
+	position: relative;
+	float: left;
+	height: 1.5rem;
+	margin-left: 0.5rem;
+}
+.h5-component-bar .rate .bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	border-radius: 3px;
+	background: #99c0ff;
+}
+.h5-component-bar .per {
+	float: left;
+	width: 2rem;
+	margin-left: 0.5rem;
+	color: #99c0ff;
+	opacity: 0;
+}
+.h5-component-bar-load .per {
+	opacity: 1;
+	-webkit-transition: all 1s 1.5s;
+	transition: all 1s 1.5s;
+}
+.h5-component-bar-leave .per {
+	opacity: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.h5-component-bar-load .rate .bg {
+	width: 100%;
+	-webkit-transition: all 1s .5s;
+	transition: all 1s .5s;
+}
+.h5-component-bar-leave .rate .bg {
+	width: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.h5-component-name-front-msg {
+	opacity: 0;
+  	width: 100%;
+  	font-size: 14px;
+ 	text-align: center;
+  	bottom: 15%;
+}

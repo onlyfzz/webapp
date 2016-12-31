@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>test-polyline</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background: #000;
+			font-size: 12px;
+		}
+		.iphone {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 340px;
+			height: 540px;
+			margin: -270px 0 0 -170px;
+			background: #fff;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../css/h5ComponentBase.css">
+	<link rel="stylesheet" type="text/css" href="../css/h5ComponentPolyline.css">
+</head>
+<body>
+	<!-- 用于开发测试 htComponentBase 对象(折线图组件) -->
+	<div class="iphone">
+		
+	</div>
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/h5ComponentBase.js"></script>
+<!-- 引入折线图 -->
+<script src="../js/h5ComponentPolyline.js"></script>
+<script type="text/javascript">
+	var cfg = {
+		type: "polyline",
+
+		width: 0.78,
+		height: 0.37,
+		data: [
+			['15分钟' , 0.128 , '#ff7676'],
+					    			['15-30分钟' , 0.176 ],
+					    			['30-60分钟' , 0.244 ],
+					    			['1-3小时' , 0.30 ],
+					    			['3小时以上' , 0.152 ]
+		],
+		css: {
+			top: '18.5%',
+			opacity: 0
+		},
+		center: true,
+		animateIn: { 
+			top: '37%',
+			opacity: 1 
+		},
+		animateOut: { 
+			top: '18.5%',
+			opacity: 0
+		}
+	};
+	var h5 = new h5ComponentPolyline("polyline",cfg);
+	$('.iphone').append(h5);
+	var leave = true;
+	$('body').click(function(){
+		leave = !leave;
+		h5.trigger( leave?'leave':'load' );
+	});
+</script>
+</body>
+</html>

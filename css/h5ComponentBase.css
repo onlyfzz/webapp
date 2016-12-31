@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*基本图文组件样式*/
+.h5-component {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.h5-component {
+	transition: all 1s; 
+}
+.h5-component-base-load {
+	opacity: 1;
+}
+.h5-component-base-leave {
+	opacity: 0;
+}
+/*# sourceMappingURL=h5ComponentBase.css.map */

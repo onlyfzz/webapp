@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>test-h5</title>
+	<link rel="stylesheet" type="text/css" href="../css/h5.css">
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- 用于开发测试h5对象,有可能加载若干个资源 -->
+	
+<!-- 基本资源库 -->
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/vendor/jquery-ui.min.js"></script>
+<script src="../js/vendor/jquery.fullPage.js"></script>
+
+<!-- h5对象资源 -->
+<script src="../js/h5.js"></script>
+<script src="../js/h5ComponentBase.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var h5 = new H5();
+
+		h5
+		.addPage('face','首页')
+			.addComponent('logo',{
+				text:'logo',
+				width: 400,
+				height: 100,
+				css: {
+					background: 'red',
+					top: 200,
+					opacity: 0
+				},
+				animateIn: {opacity: 1},
+				animateOut: {opacity: 0},
+				center: true
+			})
+			.addComponent('slogan',{
+				text:'标语',
+				width: 400,
+				height: 100,
+				css: {
+					background: 'green',
+					top: 300,
+				},
+				center: true
+			})
+		.addPage('desc','核心理念')
+			.addComponent('caption',{
+				text:'核心理念',
+				width: 400,
+				height: 100,
+				css: {
+					background: 'orange',
+					top: 200,
+				},
+				center: true
+			})
+		.addPage('page-3','分布方向')
+			.addComponent('caption',{
+				text:'分布方向',
+				width: 400,
+				height: 100,
+				css: {
+					background: 'blue',
+					top: 200,
+				},
+				center: true
+			})
+		.loader();
+	});
+</script>
+</body>
+</html>

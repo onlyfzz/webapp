@@ -1,0 +1,76 @@
+/*柱状图样式*/
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "microsoft yahei";
+}
+.h5-component-bar-v .line {
+	float: left;
+	position: relative;
+	height: 100%;
+	font-size: 12px;
+}
+.h5-component-bar-v .name {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+}
+.h5-component-bar-v .rate {
+	position: absolute;
+	left: 50%;
+	bottom: 2rem;
+	margin-left: -0.75rem;
+	width: 1.5rem;
+}
+.h5-component-bar-v .rate .bg {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0;
+	border-radius: 3px;
+	background: #99c0ff;
+}
+.h5-component-bar-v .per {
+	position: absolute;
+	left: 0;
+	top: -2rem;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	color: #99c0ff;
+	opacity: 0;
+}
+.h5-component-bar-v-load .per {
+	opacity: 1;
+	-webkit-transition: all 1s 1.5s;
+	transition: all 1s 1.5s;
+}
+.h5-component-bar-v-leave .per {
+	opacity: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.h5-component-bar-v-load .rate .bg {
+	height: 100%;
+	-webkit-transition: all 1s .5s;
+	transition: all 1s .5s;
+}
+.h5-component-bar-v-leave .rate .bg {
+	height: 0;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+}
+.h5-component-name-front-msg2 {
+	opacity: 0;
+  	width: 100%;
+  	font-size: 14px;
+ 	text-align: center;
+  	top: 30%;
+}

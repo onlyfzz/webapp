@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>test</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background: #000;
+			font-size: 12px;
+		}
+		.iphone {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 340px;
+			height: 540px;
+			margin: -270px 0 0 -170px;
+			background: #fff;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../css/h5ComponentBase.css">
+</head>
+<body>
+	<!-- 用于开发测试 htComponentBase 对象(基本的图文组件) -->
+	<div class="iphone">
+		
+	</div>
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/vendor/jquery-ui.min.js"></script>
+<script src="../js/vendor/jquery.fullPage.js"></script>
+<script src="../js/h5ComponentBase.js"></script>
+<script type="text/javascript">
+	var cfg = {
+		type: "base",
+		bg: "people.png",
+		width: 514,
+		height: 306,
+		css: {
+			left: '50',
+			top: '50',
+			opacity: 0
+		},
+		center: true,
+		animateIn: { top: 50,opacity: 1 },
+		animateOut: { top: 150,opacity: 0 }
+	};
+	var h5=new h5ComponentBase("base",cfg);
+	$('.iphone').append(h5);
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>test-point</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background: #000;
+			font-size: 12px;
+		}
+		.iphone {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 340px;
+			height: 540px;
+			margin: -270px 0 0 -170px;
+			background: #fff;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../css/h5ComponentBase.css">
+	<link rel="stylesheet" type="text/css" href="../css/h5ComponentPoint.css">
+</head>
+<body>
+	<!-- 用于开发测试 htComponentBase 对象(散点图组件) -->
+	<div class="iphone">
+		
+	</div>
+<script src="../js/vendor/jquery.js"></script>
+<script src="../js/h5ComponentBase.js"></script>
+<!-- 引入散点图 -->
+<script src="../js/h5ComponentPoint.js"></script>
+<script type="text/javascript">
+	var cfg = {
+		type: "point",
+
+		width: 0.44,
+		height: 0.278,
+		data: [
+			['A项' , .5 , 'green'],
+			['B项' , .3 , 'yellow', 0 , '-60%'],
+			['C项' , .2 , 'red', 0 , '120%'] 
+		],
+		css: {
+			bottom: '30%',
+			opacity: 0
+		},
+		center: true,
+		animateIn: { opacity: 1 },
+		animateOut: { opacity: 0 }
+	};
+	var h5 = new h5ComponentPoint("point",cfg);
+	$('.iphone').append(h5);
+	var leave = true;
+	$('body').click(function(){
+		leave = !leave;
+		h5.trigger( leave?'leave':'load' );
+	});
+</script>
+</body>
+</html>
