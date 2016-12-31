@@ -19,9 +19,11 @@
 	opacity: .7;
 }
 .circle1 {
+	-webkit-animation: action1 2s infinite ease-in-out;
 	animation: action1 2s infinite ease-in-out;
 }
 .circle2 {
+	-webkit-animation: action2 2s infinite ease-in-out;
 	animation: action2 2s infinite ease-in-out;
 }
 .loading .per{
