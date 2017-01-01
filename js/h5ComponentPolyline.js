@@ -58,7 +58,7 @@ var h5ComponentPolyline = function( name,cfg ){
 	var ctx = cns.getContext('2d');
 	cns.width = ctx.width = w;
 	cns.height = ctx.height = h;
-
+	component.append(cns);
 	/**
 	 * 绘制折线和阴影
 	 * @param {float} per 0到1之间的数据,根据这个值绘制状态 
@@ -119,7 +119,6 @@ var h5ComponentPolyline = function( name,cfg ){
 		}
 
 		ctx.stroke();
-		component.append(cns);
 	};
 
 	component.on('load',function(){
