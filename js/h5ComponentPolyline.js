@@ -112,6 +112,7 @@ var h5ComponentPolyline = function( name,cfg ){
 			x = perW*(i+1);
 			y = h*(1-item[1]*per);
 			ctx.moveTo(x,y);
+			ctx.font = "24px arial";
 			ctx.fillStyle = item[2] ? item[2]: '#595959'; 
 			var text = (item[1]*100>>0)+'%';
 			ctx.fillText( text,x-5,y-10);
