@@ -86,7 +86,7 @@
 	</div>
 <!-- 加载资源文件 -->
 <script type="text/javascript">
-	var res = ['Base','Bar','Bar-v','Pie','Point','Polyline','Radar','Ring'];
+	var res = ['Base','Bar','Bar-v','Pie','Point','Polyline','Radar'];
 	var html = [];
 	for (var i = 0; i < res.length; i++) {
 			html.push('<script src="js/h5Component'+res[i]+'.js"><\/script>');
@@ -215,7 +215,7 @@
 		    //目录
 		    var catalog=h5.addPage()
 		    	.addComponent('caption',{
-		        	text: '目录',
+		        	text: '目录(可点击跳转)',
 		        	css: { 'opacity': 1 }
 		        });
 			    for (var i = 0; i < list.length; i++) {
