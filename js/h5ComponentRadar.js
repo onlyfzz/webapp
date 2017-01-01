@@ -32,7 +32,7 @@ var h5ComponentRadar = function( name,cfg ){
 
 			ctx.beginPath();
 			for (var i = 0; i < step; i++) {
-				var rad = ( 2 * Math.PI / 360 ) * ( 360 / step ) * i;
+				var rad = ( 2 * Math.PI / step ) * i;
 				var x = r + Math.sin( rad ) * r *( j / 10 );
 				var y = r + Math.cos( rad ) * r *( j / 10 );
 				ctx.lineTo(x,y);
@@ -44,7 +44,7 @@ var h5ComponentRadar = function( name,cfg ){
 
 		//绘制伞骨
 		for (var i = 0; i < step; i++) {
-			var rad = ( 2 * Math.PI / 360 ) * ( 360 / step ) * i;
+			var rad = ( 2 * Math.PI / step ) * i;
 			var x = r + Math.sin( rad ) * r;
 			var y = r + Math.cos( rad ) * r;
 			ctx.moveTo(r,r);
@@ -93,7 +93,7 @@ var h5ComponentRadar = function( name,cfg ){
 		//清空画布
 		ctx.clearRect(0,0,w,h);
 		for (var i = 0; i < step; i++) {
-			var rad = ( 2 * Math.PI / 360 ) * ( 360 / step ) * i;
+			var rad = ( 2 * Math.PI / step ) * i;
 			var rate = cfg.data[i][1] * per;
 
 			var x = r + Math.sin( rad ) * r * rate;
@@ -107,7 +107,7 @@ var h5ComponentRadar = function( name,cfg ){
 		//绘制数据点
 		ctx.fillStyle = '#ff7676';
 		for (var i = 0; i < step; i++) {
-			var rad = ( 2 * Math.PI / 360 ) * ( 360 / step ) * i;
+			var rad = ( 2 * Math.PI / step ) * i;
 			var rate = cfg.data[i][1] * per;
 
 			var x = r + Math.sin( rad ) * r * rate;
