@@ -1,10 +1,9 @@
 /*基本图文组件对象*/
 var h5ComponentBase = function(name,cfg){
 	var cfg = cfg||{};
-	var	id = ( 'h5_c_'+Math.random() ).replace('.','');
 
 	var cls = ' h5-component-'+cfg.type;
-	var	component = $('<div class="h5-component '+cls+' h5-component-name-'+name+'" id="'+id+'"></div>');
+	var	component = $('<div class="h5-component '+cls+' h5-component-name-'+name+'"></div>');
 
 	var cWidth = Math.round(cfg.width*$(window).width());
 	var cHeight = Math.round(cfg.height*$(window).height());

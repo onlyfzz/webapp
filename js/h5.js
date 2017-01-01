@@ -1,7 +1,7 @@
 /*内容管理对象*/
 var H5 = function(){
-	this.id = ('h5_'+Math.random()).replace('.','');
-	this.el = $('<div class="h5" id="'+this.id+'"></div>').hide();
+
+	this.el = $('<div class="h5"></div>').hide();
 	this.page=[];
 	$('body').append(this.el);
 
