@@ -82,11 +82,12 @@
 	<div class="loading">
 		<div class="circle1"></div>
 		<div class="circle2"></div>
-		<p class="per" id="per">0%</p>
+		<p>loading....</p>
+		<div class="per" id="per"></div>
 	</div>
 <!-- 加载资源文件 -->
 <script type="text/javascript">
-	var res = ['Base','Bar','Bar-v','Pie','Point','Polyline','Radar'];
+	var res = ['Base','Bar','Bar-v','Pie','Point','Polyline'];
 	var html = [];
 	for (var i = 0; i < res.length; i++) {
 			html.push('<script src="js/h5Component'+res[i]+'.js"><\/script>');
@@ -99,9 +100,8 @@
 <script type="text/javascript">
 
 	$(function(){
-		var list = ['1. 前言','2. 中国手游市场的发展','3. 中国手游市场的现状',
-			'4. 游戏类型分布','5. 用户时间花费','6. 手游巨头分布',
-			'7. 用户性别分布','8. 用户年龄分布','9. 终章'
+		var list = ['1. 前言','2. 中国手游市场的发展','3. 中国手游市场的现状','4. 游戏类型分布','5. 用户时间花费',
+			'6. 用户性别分布','7. 用户年龄分布','8. 终章'
 		];
 		var h5 = new H5();
 
@@ -433,32 +433,6 @@
 		    		animateIn: {opacity: 1},
 		    		animateOut: {opacity: 0}
 		    	})
-		    //Radar
-		    .addPage()
-		    	.addComponent('caption',{
-		    		text: '手游巨头分布',
-		    		css: { 'opacity': 1 }
-		    	})
-		    	.addComponent('radar',{
-		    		type: "radar",
-		    		width: 0.588,
-		    		height: 0.37,
-
-		    		data: [
-		    			['腾讯' , 0.8 , '#ff7676'],
-		    			['网易' , 0.6 ],
-		    			['完美' , 0.4 ],
-		    			['盛大' , 0.3 ],
-		    			['金山' , 0.4 ]
-		    		],
-		    		css: {
-		    			top: '18.5%',
-		    			opacity: 0
-		    		},
-		    		center: true,
-		    		animateIn: { top: '35%',opacity: 1 },
-		    		animateOut: { top: '18.5%',opacity: 0 }
-		    	})
 		    .addPage()
 		    	.addComponent('caption',{
 		    		text: '用户性别分布',
@@ -554,7 +528,7 @@
 		       	})
 		       	.addComponent('share',{
 		       		width: 0.2,
-		       		height: 0.1056,
+		       		height: 0.2,
 		       		bg: 'imgs/share.png',
 		       		css: {
 		       			opacity: 0,

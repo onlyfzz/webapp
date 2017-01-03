@@ -16,12 +16,11 @@ var loading = function( imgs,firstPage ){
 			};
 			img.src = item;
 		}
-		$('#per').text('0%');
 		return this;
 
 	}else {
 		this.loaded++;
-		$('#per').text( parseInt(this.loaded / this.imgs * 100) + '%' );
+		$('#per').width( 100 * (this.loaded / this.imgs )  );
 		if (this.loaded < this.imgs) {
 
 			return this;
