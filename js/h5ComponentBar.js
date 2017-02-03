@@ -1,8 +1,8 @@
 /*柱状图对象*/
 
-var h5ComponentBar = function( name,cfg ){
-	var component = new h5ComponentBase( name,cfg );
-	$.each(cfg.data,function( idx,item ){
+function h5ComponentBar( name,cfg ){
+	var component = new h5ComponentBase(name, cfg );
+	$.each(cfg.data, function(idx, item){
 
 		var line = $('<div class="line"></div>'),
 			name = $('<div class="name"></div>'),
@@ -17,9 +17,9 @@ var h5ComponentBar = function( name,cfg ){
 		rate.append(bg);
 		item[2] && bg.css('background', item[2]);
 		name.text(item[0]);
-		per.text((item[1]*100).toFixed(2)+'%');
+		per.text((item[1] * 100).toFixed(2) + '%');
 		line.append(name).append(rate).append(per);
 		component.append(line);
 	});
 	return component;
-};
+}

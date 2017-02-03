@@ -1,0 +1,64 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.h5-page {
+    background-image: url(../imgs/bg_page.png);
+}
+.h5-page-face {
+    background-image: url(../imgs/bg_page2.jpg);
+}
+.h5-component-name-slogan {
+    -webkit-animation: rock 2s 2s infinite;
+    animation: rock 2s 2s infinite;
+}
+@-webkit-keyframes rock {
+    0% { 
+        transform:rotate(0deg)
+    }
+    5% { 
+        transform:rotate(3deg)
+    }
+    10%{ 
+        transform:rotate(-4deg)
+    }
+    15%{ 
+        transform:rotate(3deg)
+    }
+    20%{ 
+        transform:rotate(-2deg)
+    }
+    25%{ 
+        transform:rotate(1deg)
+    }
+    30%{ 
+        transform:rotate(-1deg)
+    }
+    70%{ 
+        transform:rotate(0deg)
+    }
+    100%{ 
+        transform:rotate(0deg)
+    }
+}
+.h5-component-name-caption {
+    width: 283px;
+    height: 160px;
+    text-align: center;
+    line-height: 140px;
+    font-size: 20px;
+    background-image: url(../imgs/title_bg.png);
+    color: #fff;
+}
+.h5-component-name-backTop {
+    -webkit-animation: back 2s 2s infinite;
+    animation: back 2s 2s infinite;
+}
+@-webkit-keyframes back {
+    50%{ transform: translateY(15px) }
+}
+.h5-component-name-list {
+    -webkit-animation: back 2s 2s infinite;
+    animation: back 2s 2s infinite; 
+}

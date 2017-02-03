@@ -1,6 +1,6 @@
 /*散点图表组件对象*/
 
-var h5ComponentPoint = function( name,cfg ){
+function h5ComponentPoint( name,cfg ){
 	var component = new h5ComponentBase( name,cfg );
 	var base = cfg.data[0][1];
 
@@ -40,4 +40,4 @@ var h5ComponentPoint = function( name,cfg ){
 		$(this).addClass('clicked');
 	});
 	return component;
-};
+}

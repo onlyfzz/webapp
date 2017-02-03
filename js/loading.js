@@ -1,4 +1,4 @@
-var loading = function( imgs,firstPage ){
+var loading = function(imgs, firstPage) {
 
 	var id = this.id;
 	var that = this;
@@ -11,7 +11,8 @@ var loading = function( imgs,firstPage ){
 		for (var i = 0; i < imgs.length; i++) {
 			var item = imgs[i];
 			var img = new Image;
-			img.onload = function(){
+			img.onload = function() {
+                // 递归调用自身
 				that.loader();
 			};
 			img.src = item;
@@ -20,9 +21,8 @@ var loading = function( imgs,firstPage ){
 
 	}else {
 		this.loaded++;
-		$('#per').width( 100 * (this.loaded / this.imgs )  );
+		$('#per').width(100 * (this.loaded / this.imgs));
 		if (this.loaded < this.imgs) {
-
 			return this;
 		}
 	}
